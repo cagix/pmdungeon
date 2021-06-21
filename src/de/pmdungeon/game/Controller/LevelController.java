@@ -130,19 +130,19 @@ public class LevelController {
     private void nextStage() throws InvocationTargetException, IllegalAccessException {
         switch (nextStage) {
             case A:
-                loadDungeon(dungeonConverter.dungeonFromJson(Constants.PATHTOLEVEL + "small_dungeon.json"));
+                loadDungeon(dungeonConverter.dungeonFromJson(Constants.getPathToLevel() + "small_dungeon.json"));
                 nextStage = Stage.B;
                 break;
             case B:
-                loadDungeon(dungeonConverter.dungeonFromJson(Constants.PATHTOLEVEL + "simple_dungeon_2.json"));
+                loadDungeon(dungeonConverter.dungeonFromJson(Constants.getPathToLevel() + "simple_dungeon_2.json"));
                 nextStage = Stage.C;
                 break;
             case C:
-                loadDungeon(dungeonConverter.dungeonFromJson(Constants.PATHTOLEVEL + "simple_dungeon.json"));
+                loadDungeon(dungeonConverter.dungeonFromJson(Constants.getPathToLevel() + "simple_dungeon.json"));
                 nextStage = Stage.D;
                 break;
             case D:
-                loadDungeon(dungeonConverter.dungeonFromJson(Constants.PATHTOLEVEL + "boss_dungeon.json"));
+                loadDungeon(dungeonConverter.dungeonFromJson(Constants.getPathToLevel() + "boss_dungeon.json"));
                 nextStage = Stage.A;
                 break;
         }

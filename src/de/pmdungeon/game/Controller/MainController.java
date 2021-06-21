@@ -74,7 +74,7 @@ public class MainController extends ScreenAdapter {
             // load first level
             firstFrame = false;
             try {
-                levelController.loadDungeon(new DungeonConverter().dungeonFromJson(Constants.STARTLEVEL));
+                levelController.loadDungeon(new DungeonConverter().dungeonFromJson(Constants.getStartLevel()));
             } catch (InvocationTargetException e) {
                 e.printStackTrace();
             } catch (IllegalAccessException e) {
@@ -144,8 +144,8 @@ public class MainController extends ScreenAdapter {
      * Setting up the camera.
      */
     private void setupCamera() {
-        camera = new DungeonCamera(null, Constants.VIRTUALHEIGHT * Constants.WIDTH / (float) Constants.HEIGHT,
-                Constants.VIRTUALHEIGHT);
+        camera = new DungeonCamera(null, Constants.getVirtualHeight() * Constants.getWidth() / (float) Constants.getHeight(),
+                Constants.getVirtualHeight());
         camera.position.set(0, 0, 0);
         camera.zoom += 1;
         camera.update();

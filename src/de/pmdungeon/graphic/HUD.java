@@ -101,8 +101,8 @@ public class HUD extends Stage {
     public void resize() {
         if (usePixelSystem)
             return;
-        hudCamera.setToOrtho(false, Constants.VIRTUALHEIGHT * Constants.WIDTH / (float) Constants.HEIGHT,
-                Constants.VIRTUALHEIGHT);
+        hudCamera.setToOrtho(false, Constants.getVirtualHeight()* Constants.getWidth() / (float) Constants.getHeight(),
+                Constants.getVirtualHeight());
         hudBatch.setProjectionMatrix(hudCamera.combined);
     }
 
